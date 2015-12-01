@@ -2,5 +2,6 @@
 
 export(mydata)
 export(mydata_del)
+export(mydata_release)
 export(mydata_version_current)
 export(mydata_versions)

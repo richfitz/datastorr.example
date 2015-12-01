@@ -1,12 +1,12 @@
-Package: dataverse.example
-Title: Example use of dataverse
-Version: 1.0.1
+Package: datastorr.example
+Title: Example use of datastorr
+Version: 1.0.2
 Author: Rich FitzJohn
 Maintainer: Rich FitzJohn <rich.fitzjohn@gmail.com>
-Description: Example use of dataverse.
+Description: Example use of datastorr.
 License: CC0
 LazyData: true
-URL: https://github.com/richfitz/dataverse.example
-BugReports: https://github.com/richfitz/dataverse.example/issues
-Imports: dataverse
+URL: https://github.com/richfitz/datastorr.example
+BugReports: https://github.com/richfitz/datastorr.example/issues
+Imports: datastorr (>= 0.0.2)
 RoxygenNote: 5.0.1

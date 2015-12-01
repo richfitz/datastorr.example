@@ -7,13 +7,13 @@
 \alias{mydata_versions}
 \title{Download example data set}
 \usage{
-mydata(version = NULL)
+mydata(version = NULL, path = NULL)
 
-mydata_versions(type = "local")
+mydata_versions(local = TRUE, path = NULL)
 
-mydata_version_current(type = "local")
+mydata_version_current(local = TRUE, path = NULL)
 
-mydata_del(version)
+mydata_del(version, path = NULL)
 }
 \arguments{
 \item{version}{Version number.  The default will load the most
@@ -22,14 +22,20 @@ to the package if you have never downloaded the data before.
 With \code{mydata_del}, specifying \code{version=NULL} will
 delete \emph{all} data sets.}
 
-\item{type}{Type of version to return: options are "local"
-(versions installed locally) or "github" (versions available on
-github).  With any luck, "github" is a superset of "local".  For
-\code{mydata_version_current}, if "local" is given, but there
-are no local versions, then we do check for the most recent
-github version.}
+\item{path}{Path to store the data at.  If not given,
+\code{datastorr} will use \code{rappdirs} to find the best place
+to put persistent application data on your system.  You can
+delete the persistnet data at any time by running
+\code{mydata_del(NULL)} (or \code{mydata_del(NULL, path)} if you
+use a different path).}
+
+\item{local}{Logical indicating if local or github versions should
+be polled.  With any luck, \code{local=FALSE} is a superset of
+\code{local=TRUE}.  For \code{mydata_version_current}, if
+\code{TRUE}, but there are no local versions, then we do check
+for the most recent github version.}
 }
 \description{
-Download the example data set from dataverse.example
+Download the example data set from datastorr.example
 }
 

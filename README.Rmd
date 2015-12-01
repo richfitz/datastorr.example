@@ -1,36 +1,32 @@
-# dataverse.example
+# datastorr.example
 
-> Example use of dataverse
+> Example use of datastorr
 
-Example use of dataverse.
+Example use of datastorr.
 
 ## Installation
 
 ```r
-devtools::install_github(c("richfitz/storr", "richfitz/dataverse"))
-devtools::install_github("richfitz/dataverse.example")
+devtools::install_github(c("richfitz/storr@refactor", "richfitz/datastorr"))
+devtools::install_github("richfitz/datastorr.example")
 ```
 
 ## Usage
 
-```{r}
-library(dataverse.example)
-```
-
 ```{r, echo=FALSE, results="hide"}
-dataverse.example::mydata_del(NULL)
+datastorr.example::mydata_del(NULL)
 ```
 
 To start with there is no data present:
 
 ```{r}
-mydata_versions()
+datastorr.example::mydata_versions()
 ```
 
 Though there are versions on github:
 
 ```{r}
-mydata_versions("github")
+datastorr.example::mydata_versions(local=FALSE)
 ```
 
 Retrieve the data:
@@ -55,5 +51,5 @@ system.time(d <- mydata())
 The local versions:
 
 ```{r}
-mydata_versions()
+datastorr.example::mydata_versions()
 ```

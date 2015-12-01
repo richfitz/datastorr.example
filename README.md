@@ -7,7 +7,7 @@ Example use of dataverse.
 ## Installation
 
 ```r
-devtools::install_github(c("richfitz/storr", "richfitz/dataverse"))
+devtools::install_github(c("richfitz/storr@simplify", "richfitz/dataverse"))
 devtools::install_github("richfitz/dataverse.example")
 ```
 
@@ -35,7 +35,7 @@ Though there are versions on github:
 
 
 ```r
-mydata_versions("github")
+mydata_versions(local=FALSE)
 ```
 
 ```
@@ -55,7 +55,7 @@ system.time(d <- mydata())
 
 ```
 ##    user  system elapsed
-##   0.007   0.008   0.817
+##   0.007   0.007   0.702
 ```
 
 The progress bar looks a bit messed up but should work well interactively.  The relevant time is the elapsed time, rather than user or system time.
@@ -74,7 +74,7 @@ system.time(d <- mydata())
 
 ```
 ##    user  system elapsed
-##   0.003   0.000   0.006
+##   0.003   0.000   0.003
 ```
 
 The local versions:
