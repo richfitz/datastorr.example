@@ -4,3 +4,5 @@
 ^README.Rmd$
 ^.travis.yml$
 ^appveyor.yml$
+^generate_data\.R$
+^mydata\.rds$
