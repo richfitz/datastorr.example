@@ -32,7 +32,7 @@ mydata_version_current <- function(type="local") {
 
 ##' @export
 ##' @rdname mydata
-mydata_version_del <- function(version) {
+mydata_del <- function(version) {
   dataverse::github_release_del(mydata_info(), version)
 }
 

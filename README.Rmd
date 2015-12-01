@@ -1,0 +1,53 @@
+# dataverse.example
+
+> Example use of dataverse
+
+Example use of dataverse.
+
+## Installation
+
+```r
+devtools::install_github(c("richfitz/storr", "richfitz/dataverse"))
+devtools::install_github("richfitz/dataverse.example")
+```
+
+## Usage
+
+```{r}
+library(dataverse.example)
+```
+
+```{r, echo=FALSE, results="hide"}
+dataverse.example::mydata_del(NULL)
+```
+
+To start with there is no data present:
+
+```{r}
+mydata_versions()
+```
+
+Though there are versions on github:
+
+```{r}
+mydata_versions("github")
+```
+
+Retrieve the data:
+
+```{r}
+system.time(d <- mydata())
+head(d)
+```
+
+Subsequent calls are very fast:
+
+```{r}
+system.time(d <- mydata())
+```
+
+The local versions:
+
+```{r}
+mydata_versions()
+```

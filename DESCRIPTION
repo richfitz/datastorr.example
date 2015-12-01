@@ -1,6 +1,6 @@
 Package: dataverse.example
 Title: Example use of dataverse
-Version: 1.0.0
+Version: 1.0.1
 Author: Rich FitzJohn
 Maintainer: Rich FitzJohn <rich.fitzjohn@gmail.com>
 Description: Example use of dataverse.

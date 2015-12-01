@@ -27,11 +27,10 @@ check_all: build
 	@rm -f `ls -1tr ${PACKAGE}*gz | tail -n1`
 	@rm -rf ${PACKAGE}.Rcheck
 
-vignettes/storr.Rmd: vignettes/src/storr.R
-	${RSCRIPT} -e 'library(sowsear); sowsear("$<", output="$@")'
-
-vignettes: vignettes/storr.Rmd
-	${RSCRIPT} -e 'library(methods); devtools::build_vignettes()'
+README.md: README.Rmd
+	Rscript -e 'library(methods); devtools::load_all(); knitr::knit("README.Rmd")'
+	sed -i.bak 's/[[:space:]]*$$//' README.md
+	rm -f $@.bak
 
 # No real targets!
 .PHONY: all test document install vignettes

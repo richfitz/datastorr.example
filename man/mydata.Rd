@@ -2,8 +2,8 @@
 % Please edit documentation in R/package.R
 \name{mydata}
 \alias{mydata}
+\alias{mydata_del}
 \alias{mydata_version_current}
-\alias{mydata_version_del}
 \alias{mydata_versions}
 \title{Download example data set}
 \usage{
@@ -13,7 +13,7 @@ mydata_versions(type = "local")
 
 mydata_version_current(type = "local")
 
-mydata_version_del(version)
+mydata_del(version)
 }
 \arguments{
 \item{version}{Version number.  The default will load the most
