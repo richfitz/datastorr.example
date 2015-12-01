@@ -37,6 +37,12 @@ Retrieve the data:
 
 ```{r}
 system.time(d <- mydata())
+```
+
+The progress bar looks a bit messed up but should work well interactively.  The relevant time is the elapsed time, rather than user or system time.
+
+The data in all its glory:
+```
 head(d)
 ```
 

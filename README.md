@@ -39,7 +39,7 @@ mydata_versions("github")
 ```
 
 ```
-## [1] "0.0.1"
+## [1] "0.0.1" "1.0.1"
 ```
 
 Retrieve the data:
@@ -55,21 +55,14 @@ system.time(d <- mydata())
 
 ```
 ##    user  system elapsed
-##   0.015   0.000   0.694
+##   0.007   0.008   0.817
 ```
 
-```r
+The progress bar looks a bit messed up but should work well interactively.  The relevant time is the elapsed time, rather than user or system time.
+
+The data in all its glory:
+```
 head(d)
-```
-
-```
-##           a         b
-## 1 0.6616596 0.4229822
-## 2 0.2688389 0.5791585
-## 3 0.8162455 0.1823209
-## 4 0.8407491 2.0629405
-## 5 0.5211733 1.7166609
-## 6 0.5655732 1.6627939
 ```
 
 Subsequent calls are very fast:
@@ -81,7 +74,7 @@ system.time(d <- mydata())
 
 ```
 ##    user  system elapsed
-##   0.003   0.000   0.003
+##   0.003   0.000   0.006
 ```
 
 The local versions:
@@ -92,5 +85,5 @@ mydata_versions()
 ```
 
 ```
-## [1] "0.0.1"
+## [1] "1.0.1"
 ```
