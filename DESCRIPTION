@@ -1,0 +1,12 @@
+Package: dataverse.example
+Title: Example use of dataverse
+Version: 1.0.0
+Author: Rich FitzJohn
+Maintainer: Rich FitzJohn <rich.fitzjohn@gmail.com>
+Description: Example use of dataverse.
+License: CC0
+LazyData: true
+URL: https://github.com/richfitz/dataverse.example
+BugReports: https://github.com/richfitz/dataverse.example/issues
+Imports: dataverse
+RoxygenNote: 5.0.1
