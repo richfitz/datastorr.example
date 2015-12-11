@@ -1,4 +1,5 @@
-##' Download the example data set from datastorr.example
+##' Download the example data set from richfitz/datastorr.example
+##'  (\url{https://github.com/richfitz/datastorr.example/})
 ##' @title Download example data set
 ##'
 ##' @param version Version number.  The default will load the most
@@ -10,7 +11,7 @@
 ##' @param path Path to store the data at.  If not given,
 ##'   \code{datastorr} will use \code{rappdirs} to find the best place
 ##'   to put persistent application data on your system.  You can
-##'   delete the persistnet data at any time by running
+##'   delete the persistent data at any time by running
 ##'   \code{mydata_del(NULL)} (or \code{mydata_del(NULL, path)} if you
 ##'   use a different path).
 ##'
@@ -45,8 +46,10 @@ mydata_del <- function(version, path=NULL) {
 }
 
 ## Core data:
-mydata_info <- function(path=NULL) {
-  datastorr::github_release_info("richfitz/datastorr.example", readRDS,
+mydata_info <- function(path) {
+  datastorr::github_release_info("richfitz/datastorr.example",
+                                 filename=NULL,
+                                 read=readRDS,
                                  path=path)
 }
 
@@ -57,7 +60,7 @@ mydata_info <- function(path=NULL) {
 ##'
 ##' @title Make a data release.
 ##' @param ... Parameters passed through to \code{\link{github_release_create}}
-##' @param path Path to the data (see \code{\link{mydata}}
+##' @param path Path to the data (see \code{\link{mydata}}).
 ##' @export
 mydata_release <- function(..., path=NULL) {
   datastorr::github_release_create(mydata_info(path), ...)

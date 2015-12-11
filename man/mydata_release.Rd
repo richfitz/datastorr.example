@@ -9,7 +9,7 @@ mydata_release(..., path = NULL)
 \arguments{
 \item{...}{Parameters passed through to \code{\link{github_release_create}}}
 
-\item{path}{Path to the data (see \code{\link{mydata}}}
+\item{path}{Path to the data (see \code{\link{mydata}}).}
 }
 \description{
 Maintainer-only function for releasing data.  This will look at

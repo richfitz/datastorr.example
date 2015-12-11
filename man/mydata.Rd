@@ -25,7 +25,7 @@ delete \emph{all} data sets.}
 \item{path}{Path to store the data at.  If not given,
 \code{datastorr} will use \code{rappdirs} to find the best place
 to put persistent application data on your system.  You can
-delete the persistnet data at any time by running
+delete the persistent data at any time by running
 \code{mydata_del(NULL)} (or \code{mydata_del(NULL, path)} if you
 use a different path).}
 
@@ -36,6 +36,7 @@ be polled.  With any luck, \code{local=FALSE} is a superset of
 for the most recent github version.}
 }
 \description{
-Download the example data set from datastorr.example
+Download the example data set from richfitz/datastorr.example
+ (\url{https://github.com/richfitz/datastorr.example/})
 }
 
