@@ -6,3 +6,4 @@
 ^appveyor.yml$
 ^generate_data\.R$
 ^mydata\.rds$
+^datastorr\.json$
