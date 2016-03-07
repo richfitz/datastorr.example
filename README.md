@@ -1,22 +1,17 @@
-# dataverse.example
+# datastorr.example
 
-> Example use of dataverse
+> Example use of datastorr
 
-Example use of dataverse.
+Example use of datastorr.
 
 ## Installation
 
 ```r
-devtools::install_github(c("richfitz/storr@simplify", "richfitz/dataverse"))
-devtools::install_github("richfitz/dataverse.example")
+devtools::install_github(c("richfitz/storr@refactor", "richfitz/datastorr"))
+devtools::install_github("richfitz/datastorr.example")
 ```
 
 ## Usage
-
-
-```r
-library(dataverse.example)
-```
 
 
 
@@ -24,7 +19,7 @@ To start with there is no data present:
 
 
 ```r
-mydata_versions()
+datastorr.example::mydata_versions()
 ```
 
 ```
@@ -35,11 +30,11 @@ Though there are versions on github:
 
 
 ```r
-mydata_versions(local=FALSE)
+datastorr.example::mydata_versions(local=FALSE)
 ```
 
 ```
-## [1] "0.0.1" "1.0.1"
+## [1] "1.0.0" "1.0.1" "1.0.2"
 ```
 
 Retrieve the data:
@@ -50,12 +45,12 @@ system.time(d <- mydata())
 ```
 
 ```
-## Downloading: 590 B     Downloading: 590 B     Downloading: 590 B       |                                                                         |                                                                 |   0%  |                                                                         |=================================================================| 100%
+## Downloading: 580 B     Downloading: 580 B     Downloading: 580 B       |                                                                         |                                                                 |   0%  |                                                                         |=================================================================| 100%
 ```
 
 ```
 ##    user  system elapsed
-##   0.007   0.007   0.702
+##   0.036   0.005   1.152
 ```
 
 The progress bar looks a bit messed up but should work well interactively.  The relevant time is the elapsed time, rather than user or system time.
@@ -74,16 +69,16 @@ system.time(d <- mydata())
 
 ```
 ##    user  system elapsed
-##   0.003   0.000   0.003
+##   0.001   0.000   0.002
 ```
 
 The local versions:
 
 
 ```r
-mydata_versions()
+datastorr.example::mydata_versions()
 ```
 
 ```
-## [1] "1.0.1"
+## [1] "1.0.2"
 ```
