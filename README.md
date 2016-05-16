@@ -7,7 +7,7 @@ Example use of datastorr.
 ## Installation
 
 ```r
-devtools::install_github(c("richfitz/storr@refactor", "richfitz/datastorr"))
+devtools::install_github("richfitz/datastorr")
 devtools::install_github("richfitz/datastorr.example")
 ```
 
