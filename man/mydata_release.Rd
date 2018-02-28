@@ -17,4 +17,3 @@ the version in the DESCRIPTION file and make a data release if the
 GitHub repository contains the same version as we have locally.
 Requires the \code{GITHUB_TOKEN} environment variable to be set.
 }
-

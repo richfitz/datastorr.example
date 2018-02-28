@@ -9,4 +9,4 @@ LazyData: true
 URL: https://github.com/richfitz/datastorr.example
 BugReports: https://github.com/richfitz/datastorr.example/issues
 Imports: datastorr (>= 0.0.2)
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
